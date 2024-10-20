@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photo {
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .photo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
