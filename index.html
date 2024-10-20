@@ -5,6 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Travel Photo Album</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #000;
+            color: #ffcc00;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .gallery {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h2 {
+            color: #d20000; /* Red from German flag */
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #ffcc00; /* Yellow from German flag */
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .photo {
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .photo:hover {
+            transform: scale(1.05);
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .description {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,29 +78,35 @@
 
         <!-- Munich Section -->
         <h3>Munich</h3>
-        <div class="photo">
-            <img src="assets/images/munich1.jpg" alt="Munich Photo 1">
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/images/munich1.jpg" alt="Munich Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0448.jpg" alt="Munich Photo 2">
+            </div>
         </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0448.jpg" alt="Munich Photo 2">
-        </div>
-        
+
         <!-- Landshut Section -->
         <h3>Landshut</h3>
-        <div class="photo">
-            <img src="assets/images/landshut1.jpg" alt="Landshut Photo 1">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0513.jpg" alt="Landshut Photo 2">
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/images/landshut1.jpg" alt="Landshut Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0513.jpg" alt="Landshut Photo 2">
+            </div>
         </div>
 
         <!-- Regensburg Section -->
         <h3>Regensburg</h3>
-        <div class="photo">
-            <img src="assets/images/IMG_0879.jpg" alt="Regensburg Photo 1">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0829.jpg" alt="Regensburg Photo 2">
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/images/IMG_0879.jpg" alt="Regensburg Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0829.jpg" alt="Regensburg Photo 2">
+            </div>
         </div>
     </section>
 
@@ -49,26 +114,28 @@
     <section class="gallery">
         <h2>Berlin</h2>
         <p class="description">A vibrant city rich in history and culture.</p>
-        <div class="photo">
-            <img src="assets/images/berlin.jpg" alt="Berlin Photo 1">
-        </div>
-        <div class="photo">
-            <img src="assets/images/berlin1.jpg" alt="Berlin Photo 2">
-        </div>
-        <div class="photo">
-            <img src="assets/images/berlin2.jpg" alt="Berlin Photo 3">
-        </div>
-        <div class="photo">
-            <img src="assets/images/berlin3.jpg" alt="Berlin Photo 4">
-        </div>
-        <div class="photo">
-            <img src="assets/images/berlin4.jpg" alt="Berlin Photo 5">
-        </div>
-        <div class="photo">
-            <img src="assets/images/berlin5.jpg" alt="Berlin Photo 6">
-        </div>
-        <div class="photo">
-            <img src="assets/images/berlin6.jpg" alt="Berlin Photo 7">
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/images/berlin.jpg" alt="Berlin Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/berlin1.jpg" alt="Berlin Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/images/berlin2.jpg" alt="Berlin Photo 3">
+            </div>
+            <div class="photo">
+                <img src="assets/images/berlin3.jpg" alt="Berlin Photo 4">
+            </div>
+            <div class="photo">
+                <img src="assets/images/berlin4.jpg" alt="Berlin Photo 5">
+            </div>
+            <div class="photo">
+                <img src="assets/images/berlin5.jpg" alt="Berlin Photo 6">
+            </div>
+            <div class="photo">
+                <img src="assets/images/berlin6.jpg" alt="Berlin Photo 7">
+            </div>
         </div>
     </section>
 
@@ -76,88 +143,92 @@
     <section class="gallery">
         <h2>Cottbus</h2>
         <p class="description">A lovely city with a unique charm.</p>
-        <div class="photo">
-            <img src="assets/images/cottbus.jpg" alt="Cottbus Photo 1">
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/images/cottbus.jpg" alt="Cottbus Photo 1">
+            </div>
         </div>
     </section>
 
     <!-- Additional Photos Section -->
     <section class="gallery">
         <h2>Additional Photos</h2>
-        <div class="photo">
-            <img src="assets/images/IMG_0423.jpg" alt="Travel Photo 1">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0486.jpg" alt="Travel Photo 2">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0488.jpg" alt="Travel Photo 3">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0506.jpg" alt="Travel Photo 4">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0508.jpg" alt="Travel Photo 5">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0526.jpg" alt="Travel Photo 6">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0527.jpg" alt="Travel Photo 7">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0543.jpg" alt="Travel Photo 8">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0545.jpg" alt="Travel Photo 9">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0555.jpg" alt="Travel Photo 10">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0561.jpg" alt="Travel Photo 11">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0610.jpg" alt="Travel Photo 12">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0611.jpg" alt="Travel Photo 13">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0612.jpg" alt="Travel Photo 14">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0633.jpg" alt="Travel Photo 15">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0795.jpg" alt="Travel Photo 16">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0843.jpg" alt="Travel Photo 17">
-        </div>
-        <div class="photo">
-            <img src="assets/images/IMG_0924.jpg" alt="Travel Photo 18">
-        </div>
-        <div class="photo">
-            <img src="assets/images/train1.jpg" alt="Train Photo 1">
-        </div>
-        <div class="photo">
-            <img src="assets/images/train2.jpg" alt="Train Photo 2">
-        </div>
-        <div class="photo">
-            <img src="assets/images/train3.jpg" alt="Train Photo 3">
-        </div>
-        <div class="photo">
-            <img src="assets/images/train4.jpg" alt="Train Photo 4">
-        </div>
-        <div class="photo">
-            <img src="assets/images/train5.jpg" alt="Train Photo 5">
-        </div>
-        <div class="photo">
-            <img src="assets/images/us1.jpg" alt="User Photo 1">
-        </div>
-        <div class="photo">
-            <img src="assets/images/us3.jpg" alt="User Photo 2">
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/images/IMG_0423.jpg" alt="Travel Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0486.jpg" alt="Travel Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0488.jpg" alt="Travel Photo 3">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0506.jpg" alt="Travel Photo 4">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0508.jpg" alt="Travel Photo 5">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0526.jpg" alt="Travel Photo 6">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0527.jpg" alt="Travel Photo 7">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0543.jpg" alt="Travel Photo 8">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0545.jpg" alt="Travel Photo 9">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0555.jpg" alt="Travel Photo 10">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0561.jpg" alt="Travel Photo 11">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0610.jpg" alt="Travel Photo 12">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0611.jpg" alt="Travel Photo 13">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0612.jpg" alt="Travel Photo 14">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0633.jpg" alt="Travel Photo 15">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0795.jpg" alt="Travel Photo 16">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0843.jpg" alt="Travel Photo 17">
+            </div>
+            <div class="photo">
+                <img src="assets/images/IMG_0924.jpg" alt="Travel Photo 18">
+            </div>
+            <div class="photo">
+                <img src="assets/images/train1.jpg" alt="Train Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/train2.jpg" alt="Train Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/images/train3.jpg" alt="Train Photo 3">
+            </div>
+            <div class="photo">
+                <img src="assets/images/train4.jpg" alt="Train Photo 4">
+            </div>
+            <div class="photo">
+                <img src="assets/images/train5.jpg" alt="Train Photo 5">
+            </div>
+            <div class="photo">
+                <img src="assets/images/us1.jpg" alt="User Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/images/us3.jpg" alt="User Photo 2">
+            </div>
         </div>
     </section>
 </body>
